@@ -1,52 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 100%;
-}
-
 body {
-  color: $colors-primary-theme;
-  font-family: $font-family-primary;
+  color: $color-main;
+  font-family: $font-roboto;
+  font-size: $font-main;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-ul,
-a,
-li,
-button {
+p,
+ul {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style: none;
-  color: $colors-primary-theme;
-  font-family: $font-family-primary;
-  font-weight: $font-weight-normal;
 }
 
-// p {
-//   display: block;
-// }
-.flex {
-  display: flex;
+img {
+  display: block;
+}
 
-  &--jc-c {
-    justify-content: center;
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+
+  &_items > li {
+    &:not(:last-child) {
+      margin-right: $val-30;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: color $animation;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $color-decoration;
   }
 
-  &--jc-sb {
-    justify-content: space-between;
-  }
+  &_active {
+    width: 100%;
+    color: $color-decoration;
 
-  &--ai-c {
-    align-items: center;
+    &::before {
+      content: "";
+      width: 100%;
+      height: $w4;
+      position: absolute;
+      bottom: $val--33;
+      left: 0;
+      background-color: $color-decoration;
+    }
   }
 }

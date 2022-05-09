@@ -1,0 +1,21 @@
+.clients {
+  display: flex;
+
+  &__link {
+    fill: $color-social;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: $val-1 solid #afb1b8;
+    border-radius: $val-4;
+    width: $w170;
+    height: $w92;
+    transition: fill $animation, border $animation;
+
+    &:hover,
+    &:focus {
+      fill: $color-decoration;
+      border: 1px solid $color-decoration;
+    }
+  }
+}

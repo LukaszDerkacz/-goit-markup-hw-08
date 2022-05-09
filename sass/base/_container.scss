@@ -1,8 +1,23 @@
 .container {
-  // height: auto;
-  // margin-right: auto;
-  // margin-left: auto;
-  // display: flex;
-  margin: 0 auto;
-  width: 1200px;
+  width: $width-container1200;
+  padding: 0 $val-15;
+
+  &_header {
+    display: flex;
+    align-items: center;
+    background-color: $color-light;
+  }
+
+  &_hero {
+    display: flex;
+    height: 37.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_footer {
+    display: flex;
+    background-color: $color-dark;
+    color: $color-light;
+  }
 }
