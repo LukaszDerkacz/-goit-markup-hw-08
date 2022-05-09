@@ -1,0 +1,41 @@
+.clients {
+  display: flex;  
+  justify-content: center;  
+  
+  &__link {
+    fill: $color-social;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: $val-1 solid #afb1b8;
+    border-radius: $val-4;
+    width: $w210;
+    height: $w92;
+    transition: fill $animation, border $animation;
+
+    &:hover,
+    &:focus {
+      fill: $color-decoration;
+      border: 1px solid $color-decoration;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .clients {
+    flex-wrap: wrap;
+    gap: 30px;
+  }  
+}
+
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }  
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: $w170;
+  }  
+}
